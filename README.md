@@ -30,6 +30,7 @@ The project is currently developed using:
 - CSS
 - Bootstrap
 - JavaScript
+
 More technologies may be added as the project develops.
 
 ## Project Status 
