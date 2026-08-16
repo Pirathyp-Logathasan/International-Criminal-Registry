@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Criminal Registry (ICR)</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--JavaScript-->
+    <script src="JavaScript/searchData.js" defer></script>
+    <script src="JavaScript/slideshow.js" defer></script>
+    <script src="JavaScript/noticeList.js" defer></script>
+
+</head>
+<body>
+    <!--top navigation bar-->
+<nav>
+    <ul>
+        <li><a class="logo" href="#"><img src="Images/INTERPOL_Logo.svg" alt="INTERPOL_Logo"></a></li>
+
+        <li class="dropdown">
+            <a href="#">Who we are</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="#">What is INTERPOL?</a></li>
+                <li><a href="#">General Secretariat</a></li>
+                <li><a href="#">Member countries</a></li>
+                <li><a href="#">Strategic Framework</a></li>
+                <li><a href="#">Legal framework</a></li>
+                <li><a href="#">Our funding</a></li>
+                <li><a href="#">Our history</a></li>
+                <li><a href="#">Our partners</a></li>
+                <li><a href="#">Commission for the Control of INTERPOL’s Files (CCF)</a></li>
+
+            </ul>
+        </li>
+
+        <li class="dropdown" >
+            <a href="#">Crimes</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Corruption</a></li>
+                <li><a href="#">Counterfeit currency and security documents</a></li>
+                <li><a href="#">Crimes against children</a></li>
+                <li><a href="#">Cultural heritage crime</a></li>
+                <li><a href="#">Cybercrime</a></li>
+                <li><a href="#">Drug Trafficking</a></li>
+                <li><a href="#">Environmental crime</a></li>
+                <li><a href="#">Financial crime</a></li>
+                <li><a href="#">Firearms trafficking</a></li>
+                <li><a href="#">Human trafficking and migrant smuggling</a></li>
+                <li><a href="#">Illicit goods</a></li>
+                <li><a href="#">Maritime crime</a></li>
+                <li><a href="#">Organized crime</a></li>
+                <li><a href="#">Terrorism</a></li>
+                <li><a href="#">Vehicle crime</a></li>
+                <li><a href="#">War crimes</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">How we work</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Border management</a></li>
+                <li><a href="#">Capacity building</a></li>
+                <li><a href="#">Command and Coordination Centre</a></li>
+                <li><a href="#">Criminal intelligence analysis</a></li>
+                <li><a href="#">Databases</a></li>
+                <li><a href="#">Forensics</a></li>
+                <li><a href="#">Fugitive investigative support</a></li>
+                <li><a href="#">I-Checkit</a></li>
+                <li><a href="#">I-CORE: our vision for change</a></li>
+                <li><a href="#">Innovation</a></li>
+                <li><a href="#">INTERPOL response teams</a></li>
+                <li><a href="#">Major event security</a></li>
+                <li><a href="#">Notices</a></li>
+                <li><a href="#">Safeguarding vulnerable communities</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">What you can do</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="#">Remembering Fallen Officers</a></li>
+                <li><a href="#">Stay safe</a></li>
+                <li><a href="#">Help us find</a></li>
+                <li><a href="#">If you need help</a></li>
+                <li><a href="#">Work for us</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">News</a></li>
+        <li><a href="#">Wanted persons</a></li>
+        <li><a href="#">Identify Me</a></li>
+
+    </ul>
+</nav>
+
+    <!--------------Image Slideshow + Next and previous buttons---------------------------->
+    <section class="slider">
+
+        <div class="slider-track">
+
+            <!-- Slide 1 -->
+            <div class="slide">
+
+                <img src="Images/Taiwan_Swat_Team.jpg" alt="Taiwan SWAT officers with protective equipment and tactical weapons.">
+
+                <div class="slide-content">
+                    <span class="slide-label">
+                      INTERNATIONAL CRIMINAL REGISTRY
+                    </span>
+
+
+                    <h2>United against global crime</h2>
+
+                    <p>"Supporting collaboration between law enforcement agencies worldwide"</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+
+            <div class="slide">
+
+                <img src="Images/INTERPOL_Image.jpg" alt="INTERPOL emblem">
+
+                <div class="slide-content">
+
+                    <span class="slide-label">
+                        INTELLIGENCE & INFORMATION
+                    </span>
+                    <h2>Smart intelligence. Safer communities.</h2>
+                    <p>"Modern tools for efficient criminal information management"</p>
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="Images/INTERPOL_Incident_Response_Team.jpg" alt="INTERPOL Incident Response Team">
+
+                <div class="slide-content">
+                    <span class="slide-label">
+                        GLOBAL COOPERATION
+                    </span>
+
+                    <h2>Strengthening global law enforcement cooperation</h2>
+
+                    <p>"Connecting agencies with efficient information sharing"</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="prev" aria-label="Previous slide">&#10094;</button>
+        <button class="next" aria-label="Next slide">&#10095;</button>
+
+    </section>
+    <!-------------Red Notice informasjon------------------>
+
+    <section class="text-container">
+        <div class="text">
+            <span class="section-label">INTERPOL NOTICE</span>
+
+
+        <h2>What is a Red Notice?</h2>
+        <p>
+            A Red Notice is a request to law enforcement worldwide to locate and provisionally arrest a person
+            pending extradition, surrender, or similar legal action. It is based on an arrest warrant or court order
+            issued by the judicial authorities in the requesting country. Member countries apply their own laws in
+            deciding whether to arrest a person.
+        </p>
+
+        <p>
+            It contains two main types of information:
+        </p>
+        <ul>
+            <li>Information to identify the wanted person, such as their name, date of birth, nationality,
+                hair and eye colour, photographs and fingerprints if available.</li>
+
+            <li>Information related to the crime they are wanted for, which can typically be murder, rape, child abuse
+                or armed robbery.</li>
+        </ul>
+
+        <p>
+            Red Notices are published by INTERPOL at the request of a member country, and must comply with INTERPOL’s
+            Constitution and Rules.
+        </p>
+
+        <div class="important-warning">
+            A Red Notice is an international alert for a wanted person, but it is not an arrest warrant.
+        </div>
+
+
+        <h2>Why are Red Notices important?</h2>
+
+        <p>
+            Red Notices are important because they are used to simultaneously alert police in all our member countries
+            about internationally wanted fugitives.
+        </p>
+
+        <p>
+            Red Notices help bring fugitives to justice, sometimes many years after the original crime was committed.
+        </p>
+
+
+
+        <h2>Are the individuals wanted by INTERPOL?</h2>
+        <p>
+            No, they are wanted by a country or an international tribunal.
+        </p>
+
+        <p>
+            INTERPOL cannot compel the law enforcement authorities in any country to arrest someone who is the subject
+            of a Red Notice.
+        </p>
+
+        <p>
+            Each member country decides what legal value it gives to a Red Notice and the authority of their law enforcement
+            officers to make arrests.
+        </p>
+
+
+
+        <h2>Who are the subjects of Red Notices?</h2>
+
+        <p>
+            Red Notices are issued for fugitives wanted either for prosecution or to serve a sentence in relation to serious
+            ordinary law crimes such as murder, rape and fraud. This follows criminal proceedings in the country issuing
+            the request. This is not always the home country of the individual.
+        </p>
+
+        <p>
+            When a person is sought for prosecution, it means the person has not been convicted and should be considered
+            innocent until proven guilty. A person sought to serve a sentence means that this person has been found guilty
+            by a court in the country that requested the publication of the Red Notice.
+        </p>
+
+
+
+        <h2>Offences for which a Red Notice may not be issued</h2>
+
+        <p>
+            Article 83 of INTERPOL’s Rules on the Processing of Data sets out the specific conditions for the publication
+            of Red Notices.
+        </p>
+
+        <p>
+            Red Notices may be published only if the offence concerned is a serious ordinary-law crime.
+            They may not be published for the following categories:
+        </p>
+
+        <ul>
+            <li>
+                offences that raise controversial issues in some countries relating to behavioural or cultural norms.
+                For example, prostitution or offences related to damaging honour;
+            </li>
+
+            <li>
+                offences relating to family/private matters. For example adultery, bigamy/polygamy or homosexual acts;
+            </li>
+
+            <li>
+                offences originating from a violation of laws or regulations of an administrative nature or deriving from
+                private disputes, unless the criminal activity is aimed at facilitating a serious crime or is
+                suspected of being connected to organized crime. For example, traffic violations, defamation,
+                or issuing unfunded cheques (unless there was a fraudulent or malicious intent at the time the cheque was
+                issued).
+            </li>
+        </ul>
+
+
+
+        <h2>What checks are done before a Red Notice is issued?</h2>
+        <p>
+            All Red Notice requests are reviewed for compliance with INTERPOL’s Rules by our Notices and Diffusions
+            Task Force, a specialized multilingual and multidisciplinary task force comprising lawyers, police officers
+            and operational specialists.
+        </p>
+
+        <p>
+            When assessing the compliance of a Notice, the Task Force considers all of the information
+            available to it at the time. For example, information from the National Central Bureau requesting the Notice,
+            other member countries and open sources.
+        </p>
+
+        <p>
+            If a Notice or diffusion is assessed as no longer being in compliance with INTERPOL's Constitution and rules,
+            it is cancelled. All member countries are informed of the decision and requested to remove any information
+            from national databases.
+        </p>
+
+
+
+        <h2>What should I do if I have information on an individual?</h2>
+        <p>
+            Please inform your local police authorities and/or the INTERPOL General Secretariat.
+        </p>
+
+
+
+        <h2>Can I find out if a Red Notice has been issued for me?</h2>
+        <p>
+            You can contact the Commission for the Control of INTERPOL’s Files (CCF), an independent body.
+            Applications to the CCF are free of charge and treated confidentially.
+        </p>
+
+        </div>
+        <img src="Images/Interpol-notices/INTERPOL_Red%20_Notice.jpg" alt="Interpol Red Notice">
+    </section>
+
+    <!------------Tekst om de ulike INTERPOL-varslene--------------->
+    <section class="text-container notice-description">
+
+        <div class="text">
+
+            <span class="section-label">
+                INTERPOL NOTICES
+            </span>
+
+            <h2>Other Types of Notices</h2>
+
+            <h3>Our colour-coded Notices enable countries to share alerts and requests for information
+                worldwide.</h3>
+
+            <p>INTERPOL Notices are international requests for cooperation or alerts allowing police
+                in member countries to share critical crime-related information.
+            </p>
+
+            <p>Notices are issued by the General Secretariat at the request of a member country’s
+                INTERPOL National Central Bureau and are made available for all our member
+                countries to consult in our Notices database.
+            </p>
+
+            <p>
+                Notices can also be issued at the request of International Criminal Tribunals and
+                the International Criminal Court to seek persons wanted for committing crimes within
+                their jurisdiction, notably genocide, war crimes, and crimes against humanity.
+                They can also be issued at the request of the United Nations in relation to the
+                implementation of sanctions imposed by the Security Council.
+            </p>
+
+            <p>
+                Most Notices are for police use only and are not available to the public.
+                However, an extract of the Notice can be published on this site if the requesting
+                country wishes to alert the public or seek their help.
+                All United Nations Special Notices are public.
+            </p>
+
+            <h3>Notices must meet legal criteria</h3>
+            <p>
+                A Notice is published only if it complies with INTERPOL’s Constitution and fulfils all
+                conditions for processing the information in accordance with our Rules on the Processing
+                of Data. This ensures the legality and quality of information, and the protection of
+                personal data.
+            </p>
+
+            <p>
+                For example, a Notice will not be published if it violates Article 3 of INTERPOL’s
+                Constitution, which forbids the Organization from undertaking any intervention or
+                activities of a political, military, religious or racial character.
+            </p>
+
+            <p>
+                Requests for notices are reviewed for compliance with INTERPOL’s rules by our Notices
+                and Diffusions Task Force; this is a specialized multilingual and multidisciplinary
+                task force comprising lawyers, police officers and operational specialists.
+            </p>
+
+            <h3>Diffusions</h3>
+            <p>
+                Member countries may also request cooperation from each other through another
+                mechanism known as a 'diffusion'. Diffusions are circulated directly by a member
+                country’s National Central Bureau to all or some other member countries.
+            </p>
+
+            <p>
+                Diffusions correspond to the Notices colour-coded system, so there are red, yellow, blue,
+                black, green, purple and orange diffusions, and they must comply with
+                INTERPOL’s Constitution and the Rules on the Processing of Data.
+            </p>
+
+            <p>
+                Wanted persons (red) diffusions –  those circulated to arrest, detain, or restrict
+                the movement of a convicted or accused person – are checked for compliance by the
+                Notices and Diffusions Task Force.
+            </p>
+
+            <p>
+                A diffusion will not be entered into in INTERPOL’s database if it is of political,
+                military, religious or racial character in violation of Article 3 of
+                INTERPOL’s Constitution.
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <!------------Oversikt over Interpol-varsler--------------->
+
+
+    <section class="notice-section">
+
+        <div class="notice-headning">
+
+        <span class="section-label">
+            NOTICE DATABASE
+        </span>
+
+        <h2>INTERPOL Notices</h2>
+
+        <p>
+            Select a notice to learn more about its purpose.
+        </p>
+        </div>
+
+
+
+        <div class="interpol-notice-container">
+            <!-- Red -->
+            <div class="interpol-notice">
+
+            <button
+                    class="notice-button red"
+                    onclick="showNotice('red')">
+
+                    <span>Red Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+
+            <div id="red-info"></div>
+        </div>
+
+
+            <!-- Yellow -->
+        <div class="interpol-notice">
+
+            <button
+                    class="notice-button yellow"
+                    onclick="showNotice('yellow')">
+                    <span>Yellow Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+
+            <div id="yellow-info"></div>
+        </div>
+
+            <!-- Blue -->
+        <div class="interpol-notice">
+
+            <button
+                    class="notice-button blue"
+                    onclick="showNotice('blue')">
+                    <span>Blue Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+
+            <div id="blue-info"></div>
+        </div>
+
+        <div class="interpol-notice">
+
+            <button
+                    class="notice-button black"
+                    onclick="showNotice('black')">
+                    <span>Black Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+
+            <div id="black-info"></div>
+        </div>
+
+        <div class="interpol-notice">
+
+            <button
+                    class="notice-button green"
+                    onclick="showNotice('green')">
+                    <span>Green Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+
+            <div id="green-info"></div>
+        </div>
+
+        <div class="interpol-notice">
+            <button
+                    class="notice-button orange" onclick="showNotice('orange')">
+                    <span>Orange Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+
+            <div id="orange-info"></div>
+        </div>
+
+        <div class="interpol-notice">
+            <button
+                    class="notice-button purple" onclick="showNotice('purple')">
+                    <span>Purple Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+            <div id="purple-info"></div>
+        </div>
+
+        <div class="interpol-notice">
+            <button
+                    class="notice-button silver" onclick="showNotice('silver')">
+                    <span>Silver Notice (pilot phase)</span>
+                    <span class="arrow">▼</span>
+            </button>
+            <div id="silver-info"></div>
+        </div>
+
+        <div class="interpol-notice">
+            <button
+                    class="notice-button lightBlue" onclick="showNotice('UN')">
+                    <span>INTERPOL–United Nations Security Council Special Notice</span>
+                    <span class="arrow">▼</span>
+            </button>
+            <div id="UN-info"></div>
+        </div>
+    </div>
+
+    </section>
+
+
+
+    <!---------------SEARCH SECTION---------------------->
+
+    <section class="search-section">
+        <div class="search-heading">
+            <span class="section-label">
+                PUBLIC RED NOTICES
+            </span>
+
+
+            <h1>Search public Red Notices</h1>
+            <p>Search and view public information about wanted persons.</p>
+        </div>
+
+        <div class="search-container">
+
+
+    <!-- Bilde eller ett eller annet som
+    visr forskejllige type interpol notice -->
+
+<!-- Container: holder skjemaet sentrert og gir luft på sidene -->
+    <form>
+        <fieldset>
+            <legend>Criminal Search:</legend>
+
+            <!-- Første rad: navn + etternavn + nasjonalitet -->
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" class="form-control" name="firstName" placeholder="First name">
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" class="form-control" name="lastName" placeholder="Last name">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="nationality">Nationality:</label>
+                    <input list="countries" id="nationality" class="form-control" name="nationality" placeholder="Nationality">
+
+                    <datalist id="countries">
+                        <option value="Norway">
+                        <option value="Sweden">
+                        <option value="Denmark">
+                        <option value="Germany">
+                        <option value="France">
+                        <option value="USA">
+                    </datalist>
+                </div>
+
+            </div> <!-- Slutt på første row -->
+
+            <!-- Andre rad: gender, wanted by, charges -->
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <label for="gender">Gender:</label>
+                    <select name="gender" class="form-select" id="gender">
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="wantedByCountry">Wanted by:</label>
+                    <input list="wantedBy" id="wantedByCountry" class="form-control" name="wantedByCountry" placeholder="Wanted by">
+                    <datalist id="wantedBy">
+                        <option value="Norway">
+                        <option value="Sweden">
+                        <option value="Denmark">
+                        <option value="Germany">
+                        <option value="France">
+                        <option value="USA">
+                    </datalist>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label for="charges">Charges:</label>
+                    <input type="text" id="charges" class="form-control" placeholder="Charges" name="charges">
+                </div>
+            </div> <!-- Slutt på andre row -->
+
+
+            <button type="button" class="search-button" onclick="searchData()">Search</button>
+
+        </fieldset>
+
+    </form>
+
+
+    <!-- Resultat vises her. Se searchData.js for mer info -->
+    <div id="result" > </div>
+        </div>
+    </section>
+
+
+    <!--Footer-->
+       <footer class="footer">
+           <a href="#"><img src="Images/INTERPOL_Logo.svg" alt="INTERPOL_Logo"></a>
+
+           <div class="footerRow">
+
+               <div class="footerColumn">
+                   <span><b>Connect with us</b></span>
+                   <p><a href="#">Contact INTERPOL</a></p>
+                   <p><a href="#">Careers</a></p>
+                   <p><a href="#">Procurement</a></p>
+                   <p><a href="#">About the CCF</a></p>
+               </div>
+
+               <div class="footerColumn">
+                       <span>Resources</span>
+                       <p><a href="#">News and Events</a></p>
+                       <p><a href="#">Information for journalists</a></p>
+                       <p><a href="#">Documents</a></p>
+                       <p><a href="#">INTERPOL Spotlight</a></p>
+                </div>
+
+
+               <div class="footerColumn">
+                   <span>Policies</span>
+                   <p><a href="#">Cookie policy</a></p>
+                   <p><a href="#">Privacy policy</a></p>
+                   <p><a href="#">Terms of use</a></p>
+                   <p><a href="#">Name and logo</a></p>
+               </div>
+           </div>
+
+           <div class="socialMedia">
+               <a class="social-icon" href="https://www.facebook.com/InterpolHQ"><img src="Images/Social_media_icons/Facebook_Logo.svg" alt="Facebook Logo"></a>
+           </div>
+
+
+   </footer>
+
+
+   </body>
+   </html>
+

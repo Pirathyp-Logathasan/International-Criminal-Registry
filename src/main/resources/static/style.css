@@ -1,0 +1,791 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+    /*background-color: #F5F7FA;*/
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 1.7;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ---------------------------------Navigasjonslinje-------------------------------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(15, 23, 42, 0.96);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease-in-out;
+
+}
+
+/* Hovedmenyen */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style:none;
+    margin: 0;
+    padding: 0 20px;
+
+}
+
+/* Menypunkter */
+nav ul li {
+    position: relative;
+
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+}
+
+
+
+
+/* Navigasjon Lenker */
+nav ul li a {
+   display: block;
+    padding: 22px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.25s ease;
+}
+
+/* Hover-effekt */
+nav ul li a:hover {
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown-meny */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1E3A5F;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    list-style:none;
+    max-height: 400px;
+    overflow-y:auto; /* Rullefelt */
+    overscroll-behavior: contain; /* Slå av rullekjedefunksjon på element når du prøver å rulle forbi rullegrensen.*/
+    overflow-x: hidden ; /*Fjerne horisontal scrolling */
+    white-space: nowrap; /* Unngå at teksten brytes, og blir på en linje */
+}
+
+
+/* Dropdown-elementene skal ligge under hverandre */
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding:12px 18px;
+    font-size: 14px;
+
+
+}
+/* Vis dropdown ved hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Hover på dropdown-elementene */
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+
+
+/* ---------------------------------Image Slideshow / Carousel + Knapper-------------------------------- */
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+
+
+}
+
+/*Mørkt gradient-overlegg*/
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.1) );
+}
+
+/*Slide-content*/
+
+.slide-content {
+    position: absolute;
+    bottom: 55px;
+    left: 8px;
+    z-index: 2;
+    max-width: 750px;
+    color: white;
+
+    width: 80%;
+    padding: 30px;
+    background-color: rgba(15, 23, 42, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.slide-label,
+.section-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.slide-content p {
+    margin: 0;
+    font-size: 18px;
+    color: #E2E8F0;
+}
+
+/*slide knapper*/
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(15, 23, 42, 0.75);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.prev:hover, .next:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ---------------------------------Tekst og info seksjon-------------------------------- */
+
+.text-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px 40px;
+
+
+}
+
+
+.text {
+    flex: 1;
+    max-width: 900px;
+    line-height: 1.7;
+}
+
+.text h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.text h2:first-of-type {
+    margin-top: 0;
+}
+
+.text h3 {
+    margin-top: 35px;
+    color: black;
+    font-size: 20px;
+}
+
+.text ul {
+    padding-left: 25px;
+}
+
+.text li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.text-container img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); ;
+}
+
+/*Viktig varsel*/
+
+.important-warning {
+    margin: 30px 0;
+    padding: 18px 20px;
+    border-left: 5px solid red;
+    background-color: white;
+    color: #991B1B;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/*---------------Oversikt over Interpol-varsler + Bootstrap card til Interpol-varsler ------------------*/
+
+.notice-section {
+    padding: 80px 40px;
+    background-color: white;
+
+
+}
+
+.notice-headning {
+    max-width: 1200px;
+
+}
+
+.notice-headning h2 {
+    margin: 0 0 10px;
+    color: black;
+    font-size: 36px;
+}
+.notice-headning p {
+    color: black;
+}
+
+/* Notice grid */
+
+.interpol-notice-container {
+
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    gap: 15px;
+    max-width: 100%;
+    margin: auto;
+
+}
+/* individuell notice */
+.interpol-notice {
+    width: 100%;
+}
+
+/*Full-width notoce*/
+.full-width-notice {
+    grid-column:1/-1;
+}
+
+/*Notice knapp*/
+.notice-button {
+    width: 100%;
+    min-height: 65px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease;
+}
+
+.notice-button:hover {
+
+    transition:
+            max-height 0.4s ease,
+            padding 0.4s ease,
+            opacity 0.4s ease,
+            transform 0.4s ease;
+
+
+
+}
+
+/*Notice piler*/
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+
+/*Notice-kort, hver Notice kort */
+.notice-card {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgba(15, 23, 42, 0.96);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    color: white;
+    border: solid #D1D5DB;
+    border-radius: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Notice kort --> bilde*/
+.notice-img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+
+
+}
+
+/*Notice kort --> beskrivelse*/
+.notice-body {
+    padding: 20px;
+    border-bottom: solid ;
+
+}
+
+/*-----------Notice farge------------ */
+
+/*Red Notice*/
+.notice-button.red {
+    border: 1px solid red;
+    color: black;
+    background-color:white;
+}
+
+.notice-button.red:hover {
+    background-color: red;
+    color: white;
+}
+
+
+/*Yellow Notice*/
+.notice-button.yellow {
+    border: 1px solid #EAB308;
+    color: black;
+    background-color:white;
+}
+
+.notice-button.yellow:hover {
+    background-color: #EAB308;
+    color: black;
+}
+
+/*Blue Notice*/
+.notice-button.blue {
+    border: 1px solid darkblue;
+    color: black;
+    background-color:white;
+}
+
+.notice-button.blue:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/*Black Notice*/
+.notice-button.black {
+    border: 1px solid black;
+    color: black;
+    background-color:white;
+
+
+}
+
+.notice-button.black:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Green Notice*/
+.notice-button.green {
+    border: 1px solid green;
+    color: black;
+    background-color:white;
+
+
+}
+
+.notice-button.green:hover {
+    background-color: green;
+    color: white;
+}
+
+
+/*Orange Notice*/
+.notice-button.orange {
+    border: 1px solid orange;
+    color: black;
+    background-color:white;
+
+
+}
+
+.notice-button.orange:hover {
+   background-color: orange;
+    color: white;
+}
+
+/*Purple Notice*/
+
+.notice-button.purple {
+    border: 1px solid purple;
+    color: black;
+    background-color:white;
+}
+
+.notice-button.purple:hover {
+    background-color: purple;
+    color: white;
+}
+
+/*Silver Notice*/
+.notice-button.silver {
+    border: 1px solid silver;
+    background-color:white;
+    color: black;
+}
+
+.notice-button.silver:hover {
+    background-color: silver;
+    color: white;
+}
+/*INTERPOL–United Nations Security Council Special Notice*/
+.notice-button.lightBlue {
+    border: 1px solid dodgerblue;
+    color: black;
+    background-color:white;
+}
+
+.notice-button.lightBlue:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+
+
+
+
+/* Klikk → "show" klassen legges til → display: block → vises*/
+/* Klikk igjen → "show" klassen fjernes → display: none → skjules*/
+
+#red-info.show,
+#yellow-info.show,
+#blue-info.show,
+#blue-info.show,
+#black-info.show,
+#green-info.show,
+#orange-info.show,
+#purple-info.show,
+#silver-info.show,
+#UN-info.show {
+    display: block;
+}
+
+
+#red-info,
+#yellow-info,
+#blue-info,
+#blue-info,
+#black-info,
+#green-info,
+#orange-info,
+#purple-info,
+#silver-info,
+#UN-info {
+    display: none;
+}
+
+/*Søkeområdet*/
+
+.search-section {
+    padding: 80px 20px;
+    background-color: #1E3A5F;
+    color: white;
+}
+
+.search-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-heading h1 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 38px;
+}
+
+.search-heading p {
+    margin: 0;
+    color: white;
+}
+
+/*Search card*/
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-container form {
+    padding: 35px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Legend */
+legend {
+    margin-bottom: 25px;
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Labels */
+
+label {
+    margin-bottom: 7px;
+    color: black;
+    font-weight: 600;
+}
+
+/* Inputs */
+
+.form-control, .form-select {
+    min-height: 45px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: black;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.12);
+}
+
+/*Søkeknapp*/
+
+.search-button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1E3A5F;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+    background-color: black;
+    transform: translateY(-2px);
+}
+
+
+/*Søkeresultater*/
+
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+
+
+/*Bootstrap card*/
+
+.card {
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card image */
+
+.card-img-top {
+    height: 300px;
+    object-fit: scale-down;
+
+}
+
+/* Card title */
+
+.card-title {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/*Footer*/
+
+.footer {
+    width: 100%;
+    background-color: #0F2742;
+    color: #E2E8F0;
+    padding: 40px 0;
+
+
+}
+/*Footer --> interpol logo*/
+.footer img {
+    width: 150px;
+    display: block;
+    margin: 0 auto 40px;
+
+}
+
+
+
+
+/*Footer --> column*/
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+
+
+
+
+
+}
+.footerRow {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 60px;
+
+    border-top: 1px solid white;
+
+}
+
+.footerColumn span {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px ;
+}
+
+/*Links*/
+.footerColumn p {
+    margin: 0 0 10px;
+}
+.footerColumn a {
+    display: inline-block;
+    color: #E2E8F0;
+    text-decoration: none;
+
+
+}
+.footerColumn a:hover {
+    text-decoration: underline;
+    color: #ff784d;
+}
+
+/*Footer --> Social Media*/
+
+.socialMedia img {
+    display: block;
+    width: 50px;
+    margin: 0 auto 40px;
+    border-style: solid;
+    border-radius: 1000px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
