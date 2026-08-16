@@ -28,6 +28,7 @@ The system allows users to search using different criteria, such as:
 The project is currently developed using: 
 - HTML
 - CSS
+- Bootstrap
 - JavaScript
 More technologies may be added as the project develops.
 
