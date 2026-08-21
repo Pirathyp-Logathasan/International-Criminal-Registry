@@ -67,8 +67,6 @@ nav ul li {
 }
 
 
-
-
 /* Navigasjon Lenker */
 nav ul li a {
    display: block;
@@ -237,10 +235,8 @@ nav ul li a:hover {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 60px;
-    max-width: 1400px;
     margin: 0 auto;
     padding: 25px 40px;
-
 
 }
 

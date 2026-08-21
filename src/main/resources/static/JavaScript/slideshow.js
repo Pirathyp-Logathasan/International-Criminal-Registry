@@ -48,18 +48,16 @@ window.addEventListener("scroll", function () {
     let nyScrollPosisjon = window.scrollY;
 
     //hvis vi scroller ned
-    if (nyScrollPosisjon > forrigeScrollPosisjon) {
-        if (nyScrollPosisjon > 100) {
+    if (nyScrollPosisjon > forrigeScrollPosisjon && nyScrollPosisjon > 100) {
             navbar.style.transform = "translateY(-100%)"; // skjul navbar
-        }
-    }
 
-    //hvis vi Scroller opp
-    else {
-        navbar.style.transform = "translateY(0)" // vis navbar
     }
+    //Hvis vi er helt øverst
+        if (nyScrollPosisjon === 0) {
+            navbar.style.transform = "translateY(0)";
+        }
 
     //oppdaterer verdien for neste scroll
-    forrigeScrollPosisjon = nyScrollPosisjon
+    forrigeScrollPosisjon = nyScrollPosisjon;
 })
 
