@@ -112,7 +112,8 @@ nav ul li a:hover {
 
 }
 /* Vis dropdown ved hover */
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
     display: block;
 }
 
@@ -151,7 +152,6 @@ nav ul li a:hover {
     width: 100%;
     height: 650px;
     object-fit: cover;
-
 
 }
 
@@ -356,15 +356,8 @@ nav ul li a:hover {
 }
 
 .notice-button:hover {
-
-    transition:
-            max-height 0.4s ease,
-            padding 0.4s ease,
-            opacity 0.4s ease,
-            transform 0.4s ease;
-
-
-
+    background-color: rgba(15, 23, 42, 0.05);
+    transform: translateY(-2px);
 }
 
 /*Notice piler*/
@@ -403,7 +396,6 @@ nav ul li a:hover {
 .notice-body {
     padding: 20px;
     border-bottom: solid ;
-
 }
 
 /*-----------Notice farge------------ */
@@ -666,8 +658,6 @@ label {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-
-
 }
 
 .card:hover {
@@ -692,35 +682,26 @@ label {
 }
 
 
-/*Footer*/
+/*-------------Footer-----------------*/
 
 .footer {
     width: 100%;
     background-color: #0F2742;
     color: #E2E8F0;
     padding: 40px 0;
-
-
 }
+
 /*Footer --> interpol logo*/
 .footer img {
     width: 150px;
     display: block;
     margin: 0 auto 40px;
-
 }
-
-
-
 
 /*Footer --> column*/
 .footerColumn {
     display: flex;
     flex-direction: column;
-
-
-
-
 
 }
 .footerRow {
@@ -730,16 +711,32 @@ label {
 
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 60px;
+    gap: 40px 60px;
+    border-top: 1px solid rgb(255, 255, 255, 0.2);
+}
 
-    border-top: 1px solid white;
+/* Responsiv: 2 kolonner på nettbrett, 1 kolonne på mobil */
 
+@media (max-width: 768px) {
+    .footerRow {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerRow {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 
 .footerColumn span {
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 15px ;
+    margin-bottom: 15px;
+    color: white;
+    letter-spacing: 0.5px;
 }
 
 /*Links*/
@@ -750,8 +747,7 @@ label {
     display: inline-block;
     color: #E2E8F0;
     text-decoration: none;
-
-
+    transition: color 0.2s ease;
 }
 .footerColumn a:hover {
     text-decoration: underline;
@@ -760,14 +756,47 @@ label {
 
 /*Footer --> Social Media*/
 
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0 ;
+}
+
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease ;
+}
+
+.social-icon img:hover {
+    border-color: #0F2742;
+}
+
+
+
 .socialMedia img {
     display: block;
     width: 50px;
-    margin: 0 auto 40px;
-    border-style: solid;
-    border-radius: 1000px;
-
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
 }
+
+
+
+
+
+
 
 
 
