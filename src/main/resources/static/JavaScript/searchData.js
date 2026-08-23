@@ -76,8 +76,12 @@ function showCriminals (data) {
                 '<b>Wanted by:</b> ' + data[i].wantedByCountry + '<br>' +
                 '<b>Charges:</b> ' + data[i].charges +
             '</p>' +
-
-            '<a href="#" class="btn btn-primary">View Details</a>' +
+            //Sender info om personen vidre til criminal-profile.html
+            '<a href="criminal-profile.html?firstName=' +
+            encodeURIComponent(data[i].firstName) +
+            '&lastName=' +
+            encodeURIComponent(data[i].lastName) +
+            '" class="btn btn-primary">View Details</a>' +
         '</div>' +
             '</div>';
 
@@ -85,7 +89,6 @@ function showCriminals (data) {
     result.appendChild(div);
     }
 }
-
 
 
 

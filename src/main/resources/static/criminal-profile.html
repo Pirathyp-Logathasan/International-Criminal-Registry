@@ -10,11 +10,13 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="info.css">
+    <link rel="stylesheet" href="profile.css">
 
     <!--JavaScript-->
 
     <script src="JavaScript/slideshow.js" defer></script>
+    <script src="JavaScript/criminal-profile.js" defer></script>
+
 
 </head>
 <body>
@@ -24,18 +26,24 @@
     <img src="Images/White_INTERPOL_Logo.png" alt="INTERPOL-logo">
 </header>
 
-<!--HTML bakgrunn-->
-<div class="html-background">
-    <img src="Images/Map.jpg" alt="World map" class="map">
-    <img src="Images/White_INTERPOL_Logo.png" alt="INTERPOL-logo" class="">
-    <img src="Images/Wanted.png" alt="wanted-stamp">
+<section class="criminal-profile">
+    <article>
+
+        <div id="show-Criminal-Profile">
+            <h1 id="name"></h1>
+            <img id="profileImage" alt="Profile image">
+
+            <p>Nationality: <span id="nationality"></span></p>
+            <p>Gender: <span id="gender"></span></p>
+            <p>Wanted by: <span id="wantedByCountry"></span></p>
+            <p>Charges: <span id="charges"></span></p>
+
+        </div>
 
 
 
-</div>
-
-
-
+    </article>
+</section>
 
 
 
