@@ -132,7 +132,6 @@ nav ul li a:hover {
     width: 100%;
     overflow: hidden;
     margin: auto;
-
 }
 
 .slider-track {
@@ -150,7 +149,7 @@ nav ul li a:hover {
 .slide img {
     display: block;
     width: 100%;
-    height: 650px;
+    height: 800px;
     object-fit: cover;
 
 }
