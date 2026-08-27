@@ -3,13 +3,13 @@
     margin: 0;
 }
 
-
-
-
-
-
-
-
+body {
+    background-image: url("Images/Map.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: #e0e0e0;
+}
 
 header {
 
@@ -37,4 +37,6 @@ header {
         text-transform: uppercase;
     }
 }
+
+
 
