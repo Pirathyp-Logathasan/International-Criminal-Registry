@@ -43,3 +43,4 @@ function showCriminalProfile(data) {
     document.getElementById("charges").innerText =
         data.charges;
 }
+

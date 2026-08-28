@@ -241,9 +241,8 @@ nav ul li a:hover {
 
 
 .text {
-    flex: 1;
+    flex: 1 1 600px;
     max-width: 900px;
-    line-height: 1.7;
 }
 
 .text h2 {
@@ -273,12 +272,18 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+.text-container aside {
+    flex: 0 1 300px;
+}
+
+
 .text-container img {
-    width: auto;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); ;
+    box-shadow: 0 10px 30px rgb(0,0,0,0.12);
 }
 
 /*Viktig varsel*/

@@ -22,7 +22,7 @@
 <body>
 
 <main>
-    <header>
+    <header class="main-header">
         <h1>CRIMINAL <b>PROFILE</b></h1>
         <img src="Images/White_INTERPOL_Logo.png" alt="INTERPOL-logo">
     </header>
@@ -30,29 +30,36 @@
 
 <section class="criminal-profile">
 
-    <header class="profile-header"> <!--Vurder header eller section for dette, men se senere-->
+    <header class="profile-header">
         <h2>EXTENDED CRIMINAL PROFILE</h2>
 
+
+        <div class="profile-content">
         <img id="profileImage" alt="Profile image">
+        <div class="profile-info">
+
+            <!--Kanskje få til en table her-->
         <p id="name"></p>
         <p>Wanted</p>
-        <p>Nationality:</p>
-        <p>Gender: </p>
+        <p class="nationality">Nationality:</p>
+        <p class="gender">Gender: </p>
+        </div>
+        </div>
     </header>
 
     <section class="personal-information">
         <h2>PERSONAL INFORMATION</h2>
 
-        <p>Family name:</p>
-        <p>First Name: </p>
-        <p>Date Of Birth: </p>
-        <p>Nationality: </p>
-        <p>Gender:</p>
+        <p id="family-name">Family name:</p>
+        <p id="first-name">First Name: </p>
+        <p id="dod">Date Of Birth: </p>
+        <p class="nation">Nationality: </p>
+        <p class="gender">Gender:</p>
     </section>
 
     <section class="criminal-information">
         <h2>CRIMINAL INFORMATION</h2>
-        <p>Charges: </p>
+        <p id="charges">Charges: </p>
         <p id="wantedByCountry">Wanted For Prosecution By:</p>
         <p>Status: Wanted</p>
 
