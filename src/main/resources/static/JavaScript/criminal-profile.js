@@ -1,3 +1,4 @@
+
 //------------------------JS-kode relatert til criminal-profile.html-------------------
 
 //Hent navnet fra URL-en med JavaScript, etter at brukeren har trykket på "view Details"
@@ -42,5 +43,18 @@ function showCriminalProfile(data) {
 
     document.getElementById("charges").innerText =
         data.charges;
+
+
+    //Kode relatert til "Personal Information delen av criminal-profile.htm"
+
+    document.getElementById("family-name").innerText =
+         data.lastName;
+    document.getElementById("first-name").innerText =
+        data.firstName
+
+
+
+
+
 }
 

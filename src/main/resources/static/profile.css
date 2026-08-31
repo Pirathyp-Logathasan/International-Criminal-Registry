@@ -42,7 +42,7 @@ body {
 .criminal-profile {
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Profile header */
@@ -80,15 +80,48 @@ body {
     img {
         width: 350px;
         height: auto;
+        border-style: solid;
+        border-color: #991B1B;
     }
 }
 
-.profile-info {
+/*HTML-table som viser informasjonen om personen */
+
+.profile-info table {
     width: 100%;
-    font-weight: bold;
-    font-size: 30px;
+    border-collapse: separate;
+    margin-top: 30px;
+}
+
+.profile-info th,
+.profile-info td {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #334155;
+    text-align: left;
+}
+
+.profile-info th {
+    width: 40%;
+    font-size: 11px;
+    font-family: "Roboto Mono", monospace;
+    color: #64748b;
+    letter-spacing: 1px;
+    padding-right: 20px;
 
 }
+
+.profile-info td {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-info .wanted {
+    color: #991B1B;
+    font-weight: 800;
+}
+
+
+
 
 
 

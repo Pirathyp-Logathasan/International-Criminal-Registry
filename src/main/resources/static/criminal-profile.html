@@ -36,13 +36,33 @@
 
         <div class="profile-content">
         <img id="profileImage" alt="Profile image">
+
         <div class="profile-info">
 
             <!--Kanskje få til en table her-->
-        <p id="name"></p>
-        <p>Wanted</p>
-        <p class="nationality">Nationality:</p>
-        <p class="gender">Gender: </p>
+            <table>
+                <tr>
+                    <th>NAME</th>
+                    <td id="name"></td>
+                </tr>
+
+                <tr>
+                    <th>NATIONALITY</th>
+                    <td id="nationality"></td>
+                </tr>
+
+                <tr>
+                    <th>GENDER</th>
+                    <td id="gender"></td>
+                </tr>
+
+                <tr>
+                    <th>STATUS</th>
+                    <td class="wanted">WANTED</td>
+                </tr>
+            </table>
+
+
         </div>
         </div>
     </header>
@@ -50,11 +70,11 @@
     <section class="personal-information">
         <h2>PERSONAL INFORMATION</h2>
 
-        <p id="family-name">Family name:</p>
-        <p id="first-name">First Name: </p>
-        <p id="dod">Date Of Birth: </p>
-        <p class="nation">Nationality: </p>
-        <p class="gender">Gender:</p>
+        <p>Family name: <span id="family-name"></span></p>
+        <p>First Name: <span id="first-name"></span> </p>
+        <p>Date Of Birth: <span id="dod"></span> </p>
+        <p>Nationality: <span id="nationality"></span> </p>
+        <p>Gender: <span id="gender"></span></p>
     </section>
 
     <section class="criminal-information">
