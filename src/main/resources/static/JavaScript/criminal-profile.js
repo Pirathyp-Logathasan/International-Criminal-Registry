@@ -24,19 +24,56 @@ fetch("api/criminals")
     showCriminalProfile(criminal)
 })
 
+
+
+
 function showCriminalProfile(data) {
+
+    //CRIMINAL PROFILE
 
     document.getElementById("name").innerText =
         data.firstName + " " + data.lastName;
 
+
+    const dates = document.querySelectorAll(".dod");
+    dates.forEach(function (element) {
+        element.innerText = data.dateOfBirth;
+        }); //gå gjennom for hvert element.
+
+
+    //Legg til age;
+    const genders = document.querySelectorAll(".gender");
+    genders.forEach(function (element) {
+        element.innerText = data.gender;
+    })
+
+    const nationalities = document.querySelectorAll(".nationality");
+    for (let i = 0; i <nationalities.length; i++) {
+        nationalities[i].innerText = data.nationality;
+    } //her bruker jeg for-løkke, i stedet for foreach.
+
+    document.getElementById("pob").innerText =
+        data.placeOfBirth;
+
+    document.getElementById("aliases").innerText =
+        data.aliases;
+
     document.getElementById("profileImage").src =
         data.imageURL;
 
-    document.getElementById("nationality").innerText =
-        data.nationality;
 
-    document.getElementById("gender").innerText =
-        data.gender;
+    // PERSONAL INFORMATION
+
+    document.getElementById("family-name").innerText =
+        data.lastName;
+
+    document.getElementById("first-name").innerText =
+        data.firstName;
+
+    // CRIMINAL INFORMATION
+
+    document.getElementById("caseNr").innerText =
+        data.caseNr
 
     document.getElementById("wantedByCountry").innerText =
         data.wantedByCountry;
@@ -45,15 +82,34 @@ function showCriminalProfile(data) {
         data.charges;
 
 
-    //Kode relatert til "Personal Information delen av criminal-profile.htm"
+    //PHYSICAL DESCRIPTION
 
-    document.getElementById("family-name").innerText =
-         data.lastName;
-    document.getElementById("first-name").innerText =
-        data.firstName
+    document.getElementById("height").innerText =
+        data.height;
+
+    document.getElementById("weight").innerText =
+        data.weight;
+
+    document.getElementById("eye-color").innerText =
+        data.eyeColor;
+
+    document.getElementById("hair-color").innerText =
+        data.hairColor;
+
+    document.getElementById("distinguishing").innerText =
+        data.distinguishing;
 
 
+    //ADDITIONAL INFORMATION
 
+    document.getElementById("language").innerText =
+        data.language;
+
+    document.getElementById("last-known-area").innerText =
+        data.lastKnownArea;
+
+    document.getElementById("note").innerText =
+        data.note;
 
 
 }

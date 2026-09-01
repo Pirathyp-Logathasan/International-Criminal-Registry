@@ -39,7 +39,6 @@
 
         <div class="profile-info">
 
-            <!--Kanskje få til en table her-->
             <table>
                 <tr>
                     <th>NAME</th>
@@ -47,13 +46,33 @@
                 </tr>
 
                 <tr>
-                    <th>NATIONALITY</th>
-                    <td id="nationality"></td>
+                    <th>DATE OF BIRTH</th>
+                    <td class="dod"></td>
+                </tr>
+
+                <tr>
+                    <th>AGE</th>
+                    <td id="age"></td>
                 </tr>
 
                 <tr>
                     <th>GENDER</th>
-                    <td id="gender"></td>
+                    <td class="gender"></td>
+                </tr>
+
+                <tr>
+                    <th>NATIONALITY</th>
+                    <td class="nationality"></td>
+                </tr>
+
+                <tr>
+                    <th>PLACE OF BIRTH</th>
+                    <td id="pob"></td>
+                </tr>
+
+                <tr>
+                    <th>ALIASES</th>
+                    <td id="aliases"></td>
                 </tr>
 
                 <tr>
@@ -67,27 +86,43 @@
         </div>
     </header>
 
+    <!--PERSONAL INFORMATION-->
     <section class="personal-information">
         <h2>PERSONAL INFORMATION</h2>
 
         <p>Family name: <span id="family-name"></span></p>
         <p>First Name: <span id="first-name"></span> </p>
-        <p>Date Of Birth: <span id="dod"></span> </p>
-        <p>Nationality: <span id="nationality"></span> </p>
-        <p>Gender: <span id="gender"></span></p>
+        <p>Date Of Birth: <span class="dod"></span> </p>
+        <p>Nationality: <span class="nationality"></span> </p>
+        <p>Gender: <span class="gender"></span></p>
     </section>
 
+    <!--CRIMINAL INFORMATION-->
     <section class="criminal-information">
         <h2>CRIMINAL INFORMATION</h2>
-        <p id="charges">Charges: </p>
-        <p id="wantedByCountry">Wanted For Prosecution By:</p>
-        <p>Status: Wanted</p>
 
+        <p>Case Number: <span id="caseNr"></span></p>
+        <p>Wanted For Prosecution By: <span id="wantedByCountry"></span></p>
+        <p>Charges: <span id="charges"></span></p>
     </section>
 
+    <!--PHYSICAL DESCRIPTION-->
+    <section class="physical-description">
+        <h2>PHYSICAL DESCRIPTION</h2>
+        <p>Height: <span id="height"></span></p>
+        <p>Weight: <span id="weight"></span> </p>
+        <p>Eye Color: <span id="eye-color"></span></p>
+        <p>Hair Color: <span id="hair-color"></span></p>
+        <p>Distinguishing: <span id="distinguishing"></span></p>
+    </section>
+
+    <!--ADDITIONAL INFORMATION-->
     <section class="additional-information">
         <h2>ADDITIONAL INFORMATION</h2>
-        <p>Additional Information: </p>
+        <p>Languages: <span id="language"></span></p>
+        <p>Last Known Area: <span id="last-known-area"></span></p>
+        <p>Notes: <span id="note"></span></p>
+
     </section>
 </section>
 </main>
