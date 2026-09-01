@@ -120,10 +120,68 @@ body {
     font-weight: 800;
 }
 
+.personal-information,
+.criminal-information,
+.physical-description,
+.additional-information {
+    margin-bottom: 40px;
+}
 
+.personal-information h2,
+.criminal-information h2,
+.physical-description h2,
+.additional-information h2 {
+    color: #ffffff;
+    background: #111827;
 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
+    padding: 14px 18px;
+    margin: 0 0 20px;
 
+    border-left: 5px solid #991B1B;
+    border-bottom: 1px solid #374151;
+}
 
+.personal-information p,
+.criminal-information p,
+.physical-description p,
+.additional-information p {
+    display: inline-flex;
+    flex-direction: column;
+
+    min-width: 220px;
+
+    padding: 12px 16px;
+    margin: 0 10px 10px 0;
+
+    background: #1f2937;
+    border: 1px solid #374151;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    color: #9ca3af;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.personal-information span,
+.criminal-information span,
+.physical-description span,
+.additional-information span {
+    margin-top: 5px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: none;
+    letter-spacing: 0;
+}
 
 
