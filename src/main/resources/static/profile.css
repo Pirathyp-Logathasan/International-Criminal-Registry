@@ -11,6 +11,34 @@ body {
     color: #e0e0e0;
 }
 
+/*Tilbakeknapp til index.html */
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(15, 23, 42, 0.75);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prev {
+    left: 300px;
+}
+
+
+.prev:hover {
+    background-color: white;
+    color: black;
+}
+
+
 .main-header {
 
     background-color: #991B1B;
@@ -124,7 +152,9 @@ body {
 .criminal-information,
 .physical-description,
 .additional-information {
+    flex-wrap: wrap;
     margin-bottom: 40px;
+
 }
 
 .personal-information h2,
@@ -151,8 +181,10 @@ body {
 .criminal-information p,
 .physical-description p,
 .additional-information p {
+
     display: inline-flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
     min-width: 220px;
 
@@ -183,5 +215,7 @@ body {
     text-transform: none;
     letter-spacing: 0;
 }
+
+
 
 
