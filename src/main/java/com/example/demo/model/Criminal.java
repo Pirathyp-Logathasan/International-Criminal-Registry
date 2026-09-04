@@ -1,6 +1,18 @@
-package com.example.demo;
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+/*@Entity = Denne Java-klassen representerer en entitet/tabell i databasen*/
+@Entity
+
 
 public class Criminal {
+    @Id // id er primærnøkkelen (Primary Key) til denne entiteten.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // generere ID-en automatisk.
+    private long id; //id til objktet, Vi bruker ID-en som database-tabellens primary key.
 
     //CRIMINAL PROFILE
     private String firstName;
@@ -30,6 +42,11 @@ public class Criminal {
     private String language;
     private String lastKnownArea;
     private String note;
+
+    public Criminal() {
+        /*Den tomme konstruktøren er der slik at JPA kan opprette Criminal-objektet først
+        og fylle inn dataene etterpå.*/
+    }
 
     public Criminal(
             String firstName, String lastName, String dateOfBirth,
