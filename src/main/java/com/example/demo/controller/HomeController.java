@@ -100,13 +100,10 @@ public class HomeController {
         return result;
     }
 
-
-
     //Lagre en ny criminal
     @PostMapping ("/criminals")
     public Criminal createCriminal (@RequestBody Criminal criminal) {
         return criminalService.saveCriminal(criminal);
     }
-
 
 }

@@ -5,6 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
 /*@Entity = Denne Java-klassen representerer en entitet/tabell i databasen*/
 @Entity
 
@@ -18,7 +25,8 @@ public class Criminal {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
-    //private String age;
+
+
     private String gender;
     private String nationality;
     private String placeOfBirth;
@@ -109,6 +117,14 @@ public class Criminal {
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    /* beregner alderen ut fra dateOfBirth */
+    public int getAlder() {
+        DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate birthDate = LocalDate.parse(dateOfBirth, formatter);
+
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
     public String getDistinguishing() {
@@ -230,4 +246,7 @@ public class Criminal {
     public void setWeight(String weight) {
         this.weight = weight;
     }
+
+
+
 }
