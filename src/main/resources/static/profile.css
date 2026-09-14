@@ -78,8 +78,6 @@ body {
 .profile-header {
     margin-bottom: 30px;
 
-
-
     h2 {
         color: #991B1B;
         font-family: 'Montserrat', sans-serif;
@@ -92,8 +90,30 @@ body {
         margin: 0;
 
         border-bottom: 2px solid #991B1B;
+
+        animation: pulse-animation 0.7s infinite ;
     }
 
+}
+
+/*
+   @keyframes beskriver hva som skal skje
+   under selve animasjonen.
+*/
+
+@keyframes pulse-animation  {
+
+    0% {
+        color: #991B1B;
+    }
+
+    50% {
+        color: #DC2626;
+    }
+
+    100% {
+        color: #991B1B;
+    }
 }
 
 /* Image + information */
@@ -146,6 +166,13 @@ body {
 .profile-info .wanted {
     color: #991B1B;
     font-weight: 800;
+    animation: pulse-animation 0.7s infinite;
+    /*
+       animation forteller at elementet skal animeres.
+       pulse-animation er navnet på @keyframes-animasjonen.
+       2s = animasjonen varer i 2 sekunder.
+       infinite = animasjonen gjentas kontinuerlig.
+    */
 }
 
 .personal-information,
