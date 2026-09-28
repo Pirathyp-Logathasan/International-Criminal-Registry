@@ -36,66 +36,6 @@ body {
     color: black;
 }
 
-/*prev button test ---> bruk eller ikke opp til deg */
-
-.prev-test {
-    position: relative;
-    width: 100px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    font-size: 24px;
-    background-color: rgb(15,23,42,0.75);
-    overflow: hidden;
-    z-index: 1;
-}
-
-.prev-test::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-
-    z-index: -1;
-}
-
-.prev-test:hover::before {
-    transform: scaleX(1);
-}
-
-.prev-test:hover {
-    color: transparent;
-}
-
-.prev-test:after {
-    content: "previous";
-    position: absolute;
-    inset: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: black;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.prev-test:hover:after {
-    opacity: 1;
-}
-
-
-
 .main-header {
 
     background-color: #991B1B;
@@ -110,9 +50,15 @@ body {
     background-color: rgba(15, 23, 42, 0.96);
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 
-    img {
+    .profilePic {
         width: 120px;
     }
+
+    .stamp {
+
+
+    }
+
 
     h1 {
         color: white;
@@ -182,12 +128,30 @@ body {
     align-items: center;
     gap: 40px;
 
-    img {
+    .profilePic {
         width: 350px;
         height: auto;
         border-style: solid;
         border-color: #991B1B;
     }
+
+    /*Wanted-stamp*/
+
+
+    .wanted-stamp {
+        position: sticky;
+        width: 600px;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+    }
+    .wanted-stamp {
+        display: none;
+    }
+
 }
 
 /*HTML-table som viser informasjonen om personen */
@@ -195,6 +159,7 @@ body {
 .profile-info table {
     width: 100%;
     border-collapse: separate;
+    padding: 30px;
     margin-top: 30px;
 }
 
@@ -207,16 +172,15 @@ body {
 
 .profile-info th {
     width: 40%;
-    font-size: 11px;
+    font-size: 20px;
     font-family: "Roboto Mono", monospace;
     color: #64748b;
     letter-spacing: 1px;
     padding-right: 20px;
-
 }
 
 .profile-info td {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
 }
 
