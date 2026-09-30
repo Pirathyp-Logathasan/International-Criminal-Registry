@@ -10,7 +10,7 @@ const lastName = params.get("lastName");
 
 //Så må du hente riktig person fra backend
 
-fetch("api/criminals")
+fetch("api/search")
 
 .then(function (response){
     return response.json()
@@ -42,6 +42,10 @@ function showCriminalProfile(data) {
 
 
     //Legg til age;
+
+    document.getElementById("age").innerText = data.alder;
+
+
     const genders = document.querySelectorAll(".gender");
     genders.forEach(function (element) {
         element.innerText = data.gender;

@@ -1,12 +1,12 @@
 
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
     getAllCriminals();
-};
+});
 
 //Henter alle kriminelle
 function getAllCriminals (){
-    fetch("/api/criminals")
+    fetch("/api/getCriminals")
         .then (function (response) {
             return response.json();
         })
@@ -15,6 +15,13 @@ function getAllCriminals (){
 
         });
 }
+
+// Informasjonen om kriminelle skal kunne aktiveres ved å trykke på Enter.
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchData();
+    }
+})
 
 // Henter verdiene brukeren har skrevet inn i søkeskjemaet, sender dem til API-et,
 // mottar søkeresultatene og viser dem på nettsiden.

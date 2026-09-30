@@ -1,12 +1,32 @@
-package com.example.demo;
+package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
+/*@Entity = Denne Java-klassen representerer en entitet/tabell i databasen*/
+@Entity
+
 
 public class Criminal {
+    @Id // id er primærnøkkelen (Primary Key) til denne entiteten.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // generere ID-en automatisk.
+    private long id; //id til objktet, Vi bruker ID-en som database-tabellens primary key.
 
     //CRIMINAL PROFILE
     private String firstName;
     private String lastName;
     private String dateOfBirth;
-    //private String age;
+
+
     private String gender;
     private String nationality;
     private String placeOfBirth;
@@ -30,6 +50,11 @@ public class Criminal {
     private String language;
     private String lastKnownArea;
     private String note;
+
+    public Criminal() {
+        /*Den tomme konstruktøren er der slik at JPA kan opprette Criminal-objektet først
+        og fylle inn dataene etterpå.*/
+    }
 
     public Criminal(
             String firstName, String lastName, String dateOfBirth,
@@ -92,6 +117,14 @@ public class Criminal {
 
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    /* beregner alderen ut fra dateOfBirth */
+    public int getAlder() {
+        DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate birthDate = LocalDate.parse(dateOfBirth, formatter);
+
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
     public String getDistinguishing() {
@@ -213,4 +246,7 @@ public class Criminal {
     public void setWeight(String weight) {
         this.weight = weight;
     }
+
+
+
 }

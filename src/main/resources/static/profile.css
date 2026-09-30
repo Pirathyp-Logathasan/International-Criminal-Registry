@@ -11,6 +11,31 @@ body {
     color: #e0e0e0;
 }
 
+/*Tilbakeknapp til index.html */
+.prev {
+    margin: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    background-color: rgba(15, 23, 42, 0.75);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+.prev {
+    left: 300px;
+}
+
+
+.prev:hover {
+    background-color: white;
+    color: black;
+}
+
 .main-header {
 
     background-color: #991B1B;
@@ -25,9 +50,15 @@ body {
     background-color: rgba(15, 23, 42, 0.96);
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 
-    img {
+    .profilePic {
         width: 120px;
     }
+
+    .stamp {
+
+
+    }
+
 
     h1 {
         color: white;
@@ -50,8 +81,6 @@ body {
 .profile-header {
     margin-bottom: 30px;
 
-
-
     h2 {
         color: #991B1B;
         font-family: 'Montserrat', sans-serif;
@@ -64,8 +93,30 @@ body {
         margin: 0;
 
         border-bottom: 2px solid #991B1B;
+
+        animation: pulse-animation 0.7s infinite ;
     }
 
+}
+
+/*
+   @keyframes beskriver hva som skal skje
+   under selve animasjonen.
+*/
+
+@keyframes pulse-animation  {
+
+    0% {
+        color: #991B1B;
+    }
+
+    50% {
+        color: #DC2626;
+    }
+
+    100% {
+        color: #611212;
+    }
 }
 
 /* Image + information */
@@ -77,12 +128,30 @@ body {
     align-items: center;
     gap: 40px;
 
-    img {
+    .profilePic {
         width: 350px;
         height: auto;
         border-style: solid;
         border-color: #991B1B;
     }
+
+    /*Wanted-stamp*/
+
+
+    .wanted-stamp {
+        position: sticky;
+        width: 600px;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+    }
+    .wanted-stamp {
+        display: none;
+    }
+
 }
 
 /*HTML-table som viser informasjonen om personen */
@@ -90,6 +159,7 @@ body {
 .profile-info table {
     width: 100%;
     border-collapse: separate;
+    padding: 30px;
     margin-top: 30px;
 }
 
@@ -102,27 +172,97 @@ body {
 
 .profile-info th {
     width: 40%;
-    font-size: 11px;
+    font-size: 20px;
     font-family: "Roboto Mono", monospace;
     color: #64748b;
     letter-spacing: 1px;
     padding-right: 20px;
-
 }
 
 .profile-info td {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .profile-info .wanted {
     color: #991B1B;
     font-weight: 800;
+    animation: pulse-animation 0.7s infinite;
+    /*
+       animation forteller at elementet skal animeres.
+       pulse-animation er navnet på @keyframes-animasjonen.
+       2s = animasjonen varer i 2 sekunder.
+       infinite = animasjonen gjentas kontinuerlig.
+    */
 }
 
+.personal-information,
+.criminal-information,
+.physical-description,
+.additional-information {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 
+}
 
+.personal-information h2,
+.criminal-information h2,
+.physical-description h2,
+.additional-information h2 {
+    color: #ffffff;
+    background: #111827;
 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding: 14px 18px;
+    margin: 0 0 20px;
+
+    border-left: 5px solid #991B1B;
+    border-bottom: 1px solid #374151;
+}
+
+.personal-information p,
+.criminal-information p,
+.physical-description p,
+.additional-information p {
+
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    min-width: 220px;
+
+    padding: 12px 16px;
+    margin: 0 10px 10px 0;
+
+    background: #1f2937;
+    border: 1px solid #374151;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    color: #9ca3af;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.personal-information span,
+.criminal-information span,
+.physical-description span,
+.additional-information span {
+    margin-top: 5px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: none;
+    letter-spacing: 0;
+}
 
 
 
